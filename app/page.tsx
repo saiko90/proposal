@@ -4,6 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Heart, ArrowDown, Check, Music, Volume2, VolumeX, ChevronDown } from 'lucide-react';
+import NeoCardFloatingBadge from './components/NeoCardFloatingBadge';
+
 
 // --- DATA ---
 const DATA = {
@@ -82,6 +84,8 @@ export default function ProposalLight() {
       >
         {audioEnabled ? <Volume2 size={20} /> : <VolumeX size={20} />}
       </button>
+      <NeoCardFloatingBadge theme="light" />
+
 
       {/* Main Content Area */}
       <AnimatePresence mode='wait'>
